@@ -1,4 +1,4 @@
-# Day 1 Goals
+# Goals
 
 - Set up developer environment
 - Learn basic syntax for declaring various types of variables (strings, booleans, integers, floats)
@@ -6,7 +6,7 @@
 - Explore flow control (`if`, `switch`, `for`)
 - Learn how to pass in arguments from CLI
 
-## Day 1 Notes
+## Notes
 
 - Golang (like Java) is more picky about types (compared to Python)
     - can't use a function if arg type doesn't match expected type in function signature
