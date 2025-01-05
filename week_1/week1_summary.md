@@ -76,5 +76,34 @@ This README outlines the daily learning goals and accomplishments for the first 
 - Practicied using `fmt` for custom error messages
 ---
 
-This week provides a strong starting point for working with Go, covering core language features and practical use cases. By the end of the week, you should feel comfortable writing small to medium-sized Go programs and exploring more advanced concepts in the following weeks.
+## Day 6: Interfaces and Polymorphism in Go
+
+**Goals:**
+- Learn how to define and use interfaces
+- Understand how interfaces enable polymorphism in Go
+- Practice implmenting interfaces with concrete types
+- Explore the `empty interface` and type assertions
+
+**Accomplishments:**
+
+1. **Defined and Implemented Interfaces:**
+   - Created a `Shape` interface with `Area` and `Perimeter` methods.
+   - Implemented `Shape` for `Circle` and `Rectangle`.
+
+2. **Used Polymorphism:**
+   - Wrote functions like `printShapeDetails` and `findLargestArea` to work with any `Shape`.
+
+3. **Explored Empty Interface:**
+   - Created a `printAny` function to accept values of any type.
+   - Used `reflect.TypeOf` to determine the type of input dynamically.
+
+4. **Practiced Type Assertions:**
+   - Enhanced `printAny` to detect and print additional details for `Shape` types.
+
+5. **Composed Interfaces:**
+   - Created `Flyer` and `Swimmer` interfaces.
+   - Implemented both in a `Duck` type.
+   - Wrote a `describeAnimals` function to check and describe capabilities dynamically.
+
+---
 
