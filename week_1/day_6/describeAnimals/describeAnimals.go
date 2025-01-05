@@ -16,6 +16,22 @@ type Duck struct {
 	Name string
 }
 
+type Fish struct {
+	Name string
+}
+
+type Owl struct {
+	Name string
+}
+
+func (o Owl) Fly() string {
+	return fmt.Sprintf("My name is %s and I'm flying", o.Name)
+}
+
+func (f Fish) Swim() string {
+	return fmt.Sprintf("My name is %s and I'm swimming", f.Name)
+}
+
 func (d Duck) Fly() string {
 	return fmt.Sprintf("My name is %s and I'm flying!", d.Name)
 }
@@ -25,24 +41,22 @@ func (d Duck) Swim() string {
 }
 
 func describeAnimals(animal interface{}) {
-	var canSwim string
-	var canFly string
+	fmt.Println("This animal can:")
 	if swimmer, ok := animal.(Swimmer); ok {
-		canSwim = swimmer.Swim()
-	} else {
-		canSwim = ""
+		fmt.Println("\t", swimmer.Swim())
 	}
-
 	if flyer, ok := animal.(Flyer); ok {
-		canFly = flyer.Fly()
-	} else {
-		canFly = ""
+		fmt.Println("\t", flyer.Fly())
 	}
-
-	fmt.Println("This animal can:\n\tFly:", canFly, "\n\tSwim:", canSwim)
 }
 
 func main() {
-	duck := Duck{Name: "Waffle"}
-	describeAnimals(duck)
+	animals := []interface{}{
+		Duck{Name: "Waffle"},
+		Owl{Name: "Mr.Who"},
+		Fish{Name: "Sharkbait"},
+	}
+	for _, anim := range animals {
+		describeAnimals(anim)
+	}
 }

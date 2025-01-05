@@ -36,13 +36,16 @@ func (rect Rectangle) Perimiter() float64 {
 }
 
 func findLargestArea(shapes []Shape) Shape {
+	if len(shapes) == 0 {
+		return nil
+	}
 	largestAreaIdx := -1
-	largestArea := math.MinInt
+	largestArea := math.Inf(-1)
 
 	for idx, sh := range shapes {
 		currArea := sh.Area()
-		if currArea > float64(largestArea) {
-			largestArea = int(currArea)
+		if currArea > largestArea {
+			largestArea = currArea
 			largestAreaIdx = idx
 		}
 	}

@@ -37,6 +37,10 @@ func (rect Rectangle) Perimiter() float64 {
 }
 
 func printAnyValue(value interface{}) {
+	if value == nil {
+		fmt.Println("Value: nil, Type: <nil>")
+		return
+	}
 	fmt.Println("Value:", value, ", Type:", reflect.TypeOf(value))
 	if shape, ok := value.(Shape); ok {
 		fmt.Println("Area:", shape.Area())

@@ -36,6 +36,7 @@ func (rect Rectangle) Perimiter() float64 {
 }
 
 func printShapeDetails(s Shape) {
+	fmt.Printf("Type: %T\n", s)
 	fmt.Println("Perimiter of shape is", s.Perimiter())
 	fmt.Println("Area of shape is", s.Area())
 }
