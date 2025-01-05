@@ -63,5 +63,18 @@ This README outlines the daily learning goals and accomplishments for the first 
 
 ---
 
+## Day 5: Errors and File Handling
+
+**Goals:**
+- Learn to work with errors, creating custom ones and handling errors returned by functions
+- Learn to work with files: reading, writing, copying
+
+**Accomplishments:**
+- Created custom Error 
+- Read and wrote to a file
+- Debugged common file errors (eg. FileNotFound)
+- Practicied using `fmt` for custom error messages
+---
+
 This week provides a strong starting point for working with Go, covering core language features and practical use cases. By the end of the week, you should feel comfortable writing small to medium-sized Go programs and exploring more advanced concepts in the following weeks.
 
