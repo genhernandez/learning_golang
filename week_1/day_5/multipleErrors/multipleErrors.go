@@ -33,11 +33,11 @@ func readFiles(filePaths []string) ([]string, []error) {
 
 func main() {
 	filePaths := []string{
-		"/Users/genesishernandez/Desktop/learning_golang/week_1/day_5/multipleErrors/first.txt",
-		"/Users/genesishernandez/Desktop/learning_golang/week_1/day_5/multipleErrors/second.txt",
-		"/Users/genesishernandez/Desktop/learning_golang/week_1/day_5/multipleErrors/third.txt",
-		"/Users/genesishernandez/Desktop/learning_golang/week_1/day_5/multipleErrors/fourth.txt", // does not exist
-		"/Users/genesishernandez/Desktop/learning_golang/week_1/day_5/multipleErrors/fifth.txt",  // does not exist
+		"./first.txt",
+		"./second.txt",
+		"./third.txt",
+		"./fourth.txt", // does not exist
+		"./fifth.txt",  // does not exist
 	}
 
 	fileContents, fileErrors := readFiles(filePaths)
